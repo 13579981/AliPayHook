@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.acitsec.hook.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/themeColor"
+        android:gravity="center"
+        android:text="支付链接生成插件"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+
+    <EditText
+        android:id="@+id/orgId"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_cirlcle"
+        android:hint="输入orgId"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/secret"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_cirlcle"
+        android:hint="输入秘钥"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/ip_port"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_cirlcle"
+        android:hint="输入IP地址和端口(示例：120.78.196.14:9060)"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/edit_cirlcle"
+        android:hint="确认"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+
+
+</LinearLayout>
