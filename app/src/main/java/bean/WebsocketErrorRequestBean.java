@@ -27,12 +27,12 @@ public class WebsocketErrorRequestBean {
         this.orgId = orgId;
     }
 
-    public String setSign() {
+    public String setSign(String key) {
         sign = MD5.md5("orgId=" + orgId + "&" +
                 "retCode="+retCode+"&"+
                 "retMsg="+retMsg+"&"+
                 "txnType="+txnType+"&"+
-                "key=" + SPUtils.getInstance().getString(Constance.KEY));
+                "key=" + key);
         return sign;
     }
     public String getRetCode() {

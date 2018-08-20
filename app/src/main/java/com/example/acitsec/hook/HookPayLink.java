@@ -123,7 +123,7 @@ public class HookPayLink implements IXposedHookLoadPackage {
                     websocketRequestBean.setRetCode(RET_CODE_FAIL);
                     websocketRequestBean.setRetMsg("支付宝没有响应" + websocketResponseBean.getTotalAmount() + " reason : " + websocketResponseBean.getReason());
                     websocketRequestBean.setTxnType(TXNTYPE_ERROR);
-                    websocketRequestBean.setSign();
+                    websocketRequestBean.setSign(key);
                     Gson gson = new Gson();
                     String s = gson.toJson(websocketRequestBean);
                     Log.e(TAG, "upLoadUrl: " + s);
@@ -197,7 +197,7 @@ public class HookPayLink implements IXposedHookLoadPackage {
                                             websocketRequestBean.setRetCode(RET_CODE_FAIL);
                                             websocketRequestBean.setRetMsg("金额或者备注对不上" + " totalAmount : " + websocketResponseBean.getTotalAmount() + " reason : " + websocketResponseBean.getReason());
                                             websocketRequestBean.setTxnType(TXNTYPE_ERROR);
-                                            websocketRequestBean.setSign();
+                                            websocketRequestBean.setSign(key);
                                             Gson gson = new Gson();
                                             String s = gson.toJson(websocketRequestBean);
                                             Log.e(TAG, "upLoadUrl: " + s);
@@ -216,7 +216,7 @@ public class HookPayLink implements IXposedHookLoadPackage {
                                     websocketRequestBean.setRetCode(RET_CODE_FAIL);
                                     websocketRequestBean.setRetMsg("金额或者备注对不上" + " totalAmount : " + websocketResponseBean.getTotalAmount() + " reason : " + websocketResponseBean.getReason());
                                     websocketRequestBean.setTxnType(TXNTYPE_ERROR);
-                                    websocketRequestBean.setSign();
+                                    websocketRequestBean.setSign(key);
                                     Gson gson = new Gson();
                                     String s = gson.toJson(websocketRequestBean);
                                     Log.e(TAG, "upLoadUrl: " + s);
@@ -369,7 +369,7 @@ public class HookPayLink implements IXposedHookLoadPackage {
                     websocketRequestBean.setRetCode(RET_CODE_OTHER_ERROR);
                     websocketRequestBean.setRetMsg("服务器请求不合法" + " totalAmount : " + websocketResponseBean.getTotalAmount() + " reason : " + websocketResponseBean.getReason());
                     websocketRequestBean.setTxnType(TXNTYPE_ERROR);
-                    websocketRequestBean.setSign();
+                    websocketRequestBean.setSign(key);
                     gson = new Gson();
                     String s = gson.toJson(websocketRequestBean);
                     Log.e(TAG, "error: " + s);
