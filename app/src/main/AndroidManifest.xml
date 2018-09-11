@@ -31,7 +31,7 @@ c
         <!-- 2、Xposed模块的描述信息 -->
         <meta-data
             android:name="xposeddescription"
-            android:value="a sample for xposed"/>
+            android:value="支付宝hook插件2.0.6"/>
 
         <!-- 3、支持Xposed框架的最低版本 -->
         <meta-data

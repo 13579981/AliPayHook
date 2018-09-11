@@ -72,5 +72,12 @@ public class FileUtils {
         return config;
     }
 
+    public void deleteConfig(){
+        File file = new File(FILE_PATH + FILE_NAME);
+        if (file.exists()) {
+            file.delete();
+        }
+    }
+
 
 }

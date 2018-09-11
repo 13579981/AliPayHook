@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         secret.setText(SPUtils.getInstance().getString(Constance.KEY));
         ip_port.setText(SPUtils.getInstance().getString(Constance.ip_port));
 
+        orgId.setText(Constance.orgId);
+        secret.setText(Constance.key);
+        ip_port.setText(Constance.IP_PORT);
+
         String[] permission = new String[]{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
         };
